@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblical Financial Stewardship: The Right Order</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        min-height: 100vh;
+        color: #2d3748;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 30px;
+        animation: slideDown 1s ease-out;
+    }
+
+    .header h1 {
+        font-size: 2.8em;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .header .subtitle {
+        font-size: 1.3em;
+        opacity: 0.95;
+        margin-bottom: 20px;
+    }
+
+    .progress-container {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        padding: 8px;
+        margin-bottom: 30px;
+        backdrop-filter: blur(10px);
+    }
+
+    .progress-bar {
+        width: 100%;
+        height: 12px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+        width: 0%;
+        transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius: 50px;
+    }
+
+    .lesson-card {
+        background: white;
+        border-radius: 20px;
+        padding: 35px;
+        margin-bottom: 30px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+    }
+
+    .lesson-card.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .lesson-card.completed {
+        opacity: 0.7;
+        transform: scale(0.98);
+    }
+
+    .lesson-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .lesson-number {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-right: 20px;
+        box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    }
+
+    .lesson-title {
+        font-size: 1.8em;
+        font-weight: 700;
+        color: #2d3748;
+    }
+
+    .biblical-principle {
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 20px 0;
+        border-left: 5px solid #ff6b6b;
+    }
+
+    .biblical-quote {
+        font-style: italic;
+        font-size: 1.1em;
+        color: #4a5568;
+        text-align: center;
+        margin: 15px 0;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        border-left: 4px solid #667eea;
+    }
+
+    .framework-comparison {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin: 25px 0;
+    }
+
+    .framework {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        padding: 20px;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    .framework:hover {
+        border-color: #667eea;
+        transform: translateY(-5px);
+    }
+
+    .framework h4 {
+        color: #2d3748;
+        margin-bottom: 15px;
+        font-size: 1.2em;
+    }
+
+    .assessment-section {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 30px;
+        margin: 25px 0;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+
+    .question {
+        margin-bottom: 25px;
+    }
+
+    .question h4 {
+        margin-bottom: 15px;
+        color: #2d3748;
+        font-size: 1.1em;
+    }
+
+    .checkbox-group {
+        display: grid;
+        gap: 10px;
+    }
+
+    .checkbox-item {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        background: #f7fafc;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .checkbox-item:hover {
+        background: #edf2f7;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+        margin-right: 12px;
+        transform: scale(1.2);
+    }
+
+    .action-item {
+        background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 20px 0;
+        border-left: 5px solid #4facfe;
+    }
+
+    .action-item h4 {
+        color: #2d3748;
+        margin-bottom: 10px;
+    }
+
+    .step-input {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e2e8f0;
+        border-radius: 8px;
+        margin-top: 10px;
+        font-family: inherit;
+        transition: border-color 0.3s ease;
+    }
+
+    .step-input:focus {
+        outline: none;
+        border-color: #667eea;
+    }
+
+    .btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 1.1em;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        pointer-events: auto;
+        user-select: none;
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn:active {
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        color: #2d3748;
+    }
+
+    .motivation-box {
+        background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+        border-radius: 15px;
+        padding: 25px;
+        margin: 25px 0;
+        text-align: center;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .fade-in {
+        animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .completion-celebration {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        margin: 30px 0;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    .step-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin: 20px 0;
+    }
+
+    .step-item {
+        background: #f7fafc;
+        padding: 15px;
+        border-radius: 10px;
+        border-left: 4px solid #667eea;
+        transition: all 0.3s ease;
+    }
+
+    .step-item:hover {
+        background: #edf2f7;
+        transform: translateX(5px);
+    }
+
+    .money-verse {
+        background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+        padding: 20px;
+        border-radius: 15px;
+        margin: 20px 0;
+        font-style: italic;
+        text-align: center;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .reflection-area {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        padding: 25px;
+        margin: 25px 0;
+    }
+
+    .reflection-area textarea {
+        width: 100%;
+        min-height: 100px;
+        padding: 15px;
+        border: 2px solid #e2e8f0;
+        border-radius: 10px;
+        font-family: inherit;
+        resize: vertical;
+    }
+
+    .timer {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: bold;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 15px;
+        }
+        
+        .header h1 {
+            font-size: 2.2em;
+        }
+        
+        .lesson-card {
+            padding: 25px;
+        }
+        
+        .framework-comparison {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+```
+
+</head>
+<body>
+    <div class="timer" id="timer">30:00</div>
+
+```
+<div class="container">
+    <div class="header">
+        <h1>⛪ Biblical Financial Stewardship</h1>
+        <div class="subtitle">The Right Order for Biblical Prosperity</div>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lesson 1: Foundation -->
+    <div class="lesson-card active" id="lesson1">
+        <div class="lesson-header">
+            <div class="lesson-number">1</div>
+            <div class="lesson-title">Biblical Foundation for Money</div>
+        </div>
+
+        <div class="biblical-principle">
+            <strong>Lennox's Kingdom Motivation:</strong> Work not just to catch fish, but because Christ the King sends you there. Your financial decisions should seek God's rule in your life.
+        </div>
+
+        <div class="biblical-quote">
+            "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters." - Colossians 3:23
+        </div>
+
+        <h3>Core Biblical Principles:</h3>
+        <div class="step-grid">
+            <div class="step-item">
+                <strong>Stewardship:</strong> Everything belongs to God, we are managers
+            </div>
+            <div class="step-item">
+                <strong>Character Over Achievement:</strong> God cares more about who you become
+            </div>
+            <div class="step-item">
+                <strong>No Sacred/Secular Divide:</strong> All honest work has Kingdom value
+            </div>
+            <div class="step-item">
+                <strong>Gospel Patronage:</strong> Use resources to advance God's Kingdom
+            </div>
+        </div>
+
+        <div class="assessment-section">
+            <h3>Quick Self-Assessment</h3>
+            <div class="question">
+                <h4>How do you currently view your work and money? (Check all that apply)</h4>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="workview" value="paycheck">
+                        <span>Primarily as a way to earn a paycheck</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="workview" value="calling">
+                        <span>As a calling from God to serve others</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="workview" value="stress">
+                        <span>As a source of stress and frustration</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="workview" value="worship">
+                        <span>As an avenue of worship and character development</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn" onclick="nextLesson(2)">Continue to Framework Overview →</button>
+    </div>
+
+    <!-- Lesson 2: Framework Overview -->
+    <div class="lesson-card hidden" id="lesson2">
+        <div class="lesson-header">
+            <div class="lesson-number">2</div>
+            <div class="lesson-title">The Two Proven Frameworks</div>
+        </div>
+
+        <div class="biblical-quote">
+            "The plans of the diligent lead to profit as surely as haste leads to poverty." - Proverbs 21:5
+        </div>
+
+        <div class="framework-comparison">
+            <div class="framework">
+                <h4>🔥 Dave Ramsey's 7 Baby Steps</h4>
+                <ol>
+                    <li>$1,000 Emergency Fund</li>
+                    <li>Pay Off All Debt (except house)</li>
+                    <li>3-6 Month Emergency Fund</li>
+                    <li>Invest 15% for Retirement</li>
+                    <li>Kids' College Fund</li>
+                    <li>Pay Off House Early</li>
+                    <li>Build Wealth & Give</li>
+                </ol>
+                <p><strong>Focus:</strong> Debt elimination first, then wealth building</p>
+            </div>
+
+            <div class="framework">
+                <h4>📊 Money Guys' 9-Step FOO</h4>
+                <ol>
+                    <li>Cover Deductibles</li>
+                    <li>Employer Match (Free Money!)</li>
+                    <li>High-Interest Debt</li>
+                    <li>Emergency Reserves</li>
+                    <li>Roth IRA & HSA Max</li>
+                    <li>Max Retirement Accounts</li>
+                    <li>Hyper-Accumulation (25%+ savings)</li>
+                    <li>Prepaid Future Expenses</li>
+                    <li>Low-Interest Debt</li>
+                </ol>
+                <p><strong>Focus:</strong> Balance debt elimination with investment optimization</p>
+            </div>
+        </div>
+
+        <div class="motivation-box">
+            <h3>🎯 Biblical Integration</h3>
+            <p>Both frameworks align with biblical stewardship when we remember that <strong>character development</strong> and <strong>serving others</strong> are the ultimate goals, not just wealth accumulation.</p>
+        </div>
+
+        <button class="btn" onclick="nextLesson(3)">Assess My Current Situation →</button>
+    </div>
+
+    <!-- Lesson 3: Where Are You Now? -->
+    <div class="lesson-card hidden" id="lesson3">
+        <div class="lesson-header">
+            <div class="lesson-number">3</div>
+            <div class="lesson-title">Where Are You Now?</div>
+        </div>
+
+        <div class="money-verse">
+            "Suppose one of you wants to build a tower. Won't you first sit down and estimate the cost?" - Luke 14:28
+        </div>
+
+        <div class="assessment-section">
+            <h3>📊 Financial Reality Check</h3>
+            
+            <div class="question">
+                <h4>Emergency Fund Status:</h4>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="radio" name="emergency" value="none">
+                        <span>No emergency fund ($0)</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="radio" name="emergency" value="partial">
+                        <span>Some savings but less than $1,000</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="radio" name="emergency" value="starter">
+                        <span>$1,000+ saved</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="radio" name="emergency" value="full">
+                        <span>3-6 months of expenses saved</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h4>Debt Situation:</h4>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="debt" value="credit">
+                        <span>Credit card debt (high interest)</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="debt" value="student">
+                        <span>Student loans</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="debt" value="car">
+                        <span>Car payments</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="debt" value="mortgage">
+                        <span>Mortgage (only)</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="debt" value="debtfree">
+                        <span>Debt-free!</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h4>Retirement Saving:</h4>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="radio" name="retirement" value="none">
+                        <span>Not saving for retirement yet</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="radio" name="retirement" value="some">
+                        <span>Saving some, but not getting full employer match</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="radio" name="retirement" value="match">
+                        <span>Getting full employer match</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="radio" name="retirement" value="max">
+                        <span>Maxing out retirement accounts</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn" onclick="nextLesson(4)">Get My Personalized Plan →</button>
+    </div>
+
+    <!-- Lesson 4: Your Next Steps -->
+    <div class="lesson-card hidden" id="lesson4">
+        <div class="lesson-header">
+            <div class="lesson-number">4</div>
+            <div class="lesson-title">Your Biblical Action Plan</div>
+        </div>
+
+        <div id="personalizedPlan" class="assessment-section">
+            <!-- Personalized plan will be generated here -->
+        </div>
+
+        <div class="action-item">
+            <h4>📝 Write Your Next 3 Actions:</h4>
+            <input type="text" class="step-input" placeholder="1. My first step this week will be..." id="action1">
+            <input type="text" class="step-input" placeholder="2. My second priority is..." id="action2">
+            <input type="text" class="step-input" placeholder="3. By next month, I will..." id="action3">
+        </div>
+
+        <button class="btn" onclick="nextLesson(5)">Explore Biblical Money Wisdom →</button>
+    </div>
+
+    <!-- Lesson 5: Biblical Money Wisdom -->
+    <div class="lesson-card hidden" id="lesson5">
+        <div class="lesson-header">
+            <div class="lesson-number">5</div>
+            <div class="lesson-title">Biblical Money Wisdom</div>
+        </div>
+
+        <div class="biblical-principle">
+            <strong>Remember Lennox's Teaching:</strong> God is more interested in who you are and your motivation than what you accomplish. Your financial journey is about character development.
+        </div>
+
+        <div class="step-grid">
+            <div class="step-item">
+                <strong>💰 Generous Spirit</strong><br>
+                "Give, and it will be given to you" - Luke 6:38
+            </div>
+            <div class="step-item">
+                <strong>⚖️ Work-Rest Rhythm</strong><br>
+                Follow God's pattern of work and sabbath
+            </div>
+            <div class="step-item">
+                <strong>🎯 Eternal Perspective</strong><br>
+                "Store up treasures in heaven" - Matthew 6:20
+            </div>
+            <div class="step-item">
+                <strong>🤝 Gospel Patronage</strong><br>
+                Use resources to advance God's Kingdom
+            </div>
+        </div>
+
+        <div class="reflection-area">
+            <h3>💭 Personal Reflection</h3>
+            <p><strong>Lennox asks:</strong> "When was the last time you went to work with an active sense that the Lord was sending you there?"</p>
+            <textarea placeholder="How might viewing your financial decisions through the lens of Kingdom work change your approach to money?" id="kingdomReflection"></textarea>
+        </div>
+
+        <button class="btn" onclick="nextLesson(6)">Create My Implementation Plan →</button>
+    </div>
+
+    <!-- Lesson 6: Implementation -->
+    <div class="lesson-card hidden" id="lesson6">
+        <div class="lesson-header">
+            <div class="lesson-number">6</div>
+            <div class="lesson-title">Your 30-Day Implementation Plan</div>
+        </div>
+
+        <div class="motivation-box">
+            <h3>🚀 From Learning to Living</h3>
+            <p>Faith without works is dead. Let's turn these biblical principles into concrete action!</p>
+        </div>
+
+        <div class="assessment-section">
+            <h3>📅 Week-by-Week Action Plan</h3>
+            
+            <div class="action-item">
+                <h4>Week 1: Foundation Setting</h4>
+                <input type="text" class="step-input" placeholder="Calculate your insurance deductibles..." id="week1">
+            </div>
+
+            <div class="action-item">
+                <h4>Week 2: Income Optimization</h4>
+                <input type="text" class="step-input" placeholder="Review employer benefits, increase 401k if needed..." id="week2">
+            </div>
+
+            <div class="action-item">
+                <h4>Week 3: Debt Strategy</h4>
+                <input type="text" class="step-input" placeholder="List all debts, create payment plan..." id="week3">
+            </div>
+
+            <div class="action-item">
+                <h4>Week 4: Kingdom Integration</h4>
+                <input type="text" class="step-input" placeholder="Pray about giving, plan generosity..." id="week4">
+            </div>
+        </div>
+
+        <div class="reflection-area">
+            <h3>🎯 My Financial Mission Statement</h3>
+            <textarea placeholder="Write a brief statement about how you want to handle money as a faithful steward..." id="missionStatement"></textarea>
+        </div>
+
+        <button class="btn" onclick="completeWC()">Complete Course & Get Resources →</button>
+    </div>
+
+    <!-- Completion -->
+    <div class="lesson-card hidden" id="completion">
+        <div class="completion-celebration">
+            <h2>🎉 Congratulations!</h2>
+            <p>You've completed Biblical Financial Stewardship: The Right Order</p>
+            
+            <div style="margin: 30px 0;">
+                <h3>📚 Recommended Next Steps:</h3>
+                <div style="text-align: left; max-width: 500px; margin: 0 auto;">
+                    <p>• Read John Lennox's "A Good Return"</p>
+                    <p>• Start Dave Ramsey's Financial Peace University</p>
+                    <p>• Download The Money Guy's FOO resource</p>
+                    <p>• Join a biblical financial small group</p>
+                    <p>• Set up automatic savings/investing</p>
+                </div>
+            </div>
+
+            <button class="btn btn-secondary" onclick="generatePDF()">Download My Action Plan</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentLesson = 1;
+    let startTime = Date.now();
+    let timer;
+
+    // Initialize timer
+    function initTimer() {
+        let timeLeft = 30 * 60; // 30 minutes in seconds
+        
+        timer = setInterval(() => {
+            timeLeft--;
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer').textContent = 
+                `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                document.getElementById('timer').textContent = "Time's up!";
+                document.getElementById('timer').style.background = 'linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%)';
+            }
+        }, 1000);
+    }
+
+    function nextLesson(lessonNumber) {
+        console.log(`Moving to lesson ${lessonNumber}`); // Debug log
+        
+        // Hide current lesson
+        const currentLessonEl = document.getElementById(`lesson${currentLesson}`);
+        if (currentLessonEl) {
+            currentLessonEl.classList.add('hidden');
+            currentLessonEl.classList.remove('active');
+            currentLessonEl.classList.add('completed');
+        }
+        
+        // Show next lesson
+        currentLesson = lessonNumber;
+        const nextLessonEl = document.getElementById(`lesson${lessonNumber}`);
+        if (nextLessonEl) {
+            nextLessonEl.classList.remove('hidden');
+            nextLessonEl.classList.add('active');
+            nextLessonEl.classList.add('fade-in');
+        }
+        
+        // Update progress
+        updateProgress();
+        
+        // Scroll to top smoothly
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
+        
+        // Generate personalized plan if we're on lesson 4
+        if (lessonNumber === 4) {
+            setTimeout(() => {
+                generatePersonalizedPlan();
+            }, 500);
+        }
+    }
+
+    function updateProgress() {
+        const progress = (currentLesson / 6) * 100;
+        document.getElementById('progressFill').style.width = `${progress}%`;
+    }
+
+    function generatePersonalizedPlan() {
+        const emergency = document.querySelector('input[name="emergency"]:checked')?.value || 'none';
+        const debts = Array.from(document.querySelectorAll('input[name="debt"]:checked')).map(el => el.value);
+        const retirement = document.querySelector('input[name="retirement"]:checked')?.value || 'none';
+        
+        let plan = '<h3>🎯 Your Personalized Biblical Action Plan</h3>';
+        
+        // Emergency fund guidance
+        if (emergency === 'none' || emergency === 'partial') {
+            plan += `
+                <div class="action-item">
+                    <h4>🚨 Priority #1: Emergency Foundation</h4>
+                    <p><strong>Biblical Principle:</strong> "In the house of the wise are stores of choice food and oil" - Proverbs 21:20</p>
+                    <p><strong>Action:</strong> Save $1,000 as quickly as possible. This gives you peace and prevents debt when emergencies happen.</p>
+                    <p><strong>How:</strong> Sell unused items, work extra hours, cut expenses temporarily</p>
+                </div>`;
+        }
+        
+        // Employer match
+        if (retirement === 'none' || retirement === 'some') {
+            plan += `
+                <div class="action-item">
+                    <h4>💰 Priority #2: Free Money (Employer Match)</h4>
+                    <p><strong>Biblical Principle:</strong> "A wise person sees danger and takes refuge" - Proverbs 22:3</p>
+                    <p><strong>Action:</strong> Contribute enough to get your full employer match. This is 50-100% instant return!</p>
+                    <p><strong>How:</strong> Contact HR Monday, increase contribution to get full match</p>
+                </div>`;
+        }
+        
+        // Debt strategy
+        if (debts.includes('credit')) {
+            plan += `
+                <div class="action-item">
+                    <h4>🔥 Priority #3: High-Interest Debt</h4>
+                    <p><strong>Biblical Principle:</strong> "The borrower is slave to the lender" - Proverbs 22:7</p>
+                    <p><strong>Action:</strong> Attack credit cards aggressively using debt snowball method</p>
+                    <p><strong>Strategy:</strong> List debts smallest to largest, pay minimums on all except smallest, attack smallest with everything you have</p>
+                </div>`;
+        }
+        
+        // Next steps based on current status
+        if (emergency === 'starter' && !debts.includes('credit')) {
+            plan += `
+                <div class="action-item">
+                    <h4>🛡️ Next: Full Emergency Fund</h4>
+                    <p><strong>Goal:</strong> Save 3-6 months of expenses</p>
+                    <p><strong>Biblical Basis:</strong> Preparing for uncertainty while trusting God</p>
+                </div>`;
+        }
+        
+        // Kingdom perspective
+        plan += `
+            <div class="biblical-principle">
+                <h4>👑 Kingdom Perspective</h4>
+                <p><strong>Remember:</strong> Each financial decision is an opportunity to seek God's Kingdom first. 
+                You're not just building wealth—you're developing character and positioning yourself to be generous.</p>
+            </div>`;
+        
+        document.getElementById('personalizedPlan').innerHTML = plan;
+    }
+
+    function completeWC() {
+        // Hide current lesson
+        document.getElementById(`lesson${currentLesson}`).classList.add('hidden');
+        
+        // Show completion
+        document.getElementById('completion').classList.remove('hidden');
+        document.getElementById('completion').classList.add('active');
+        
+        // Update progress to 100%
+        document.getElementById('progressFill').style.width = '100%';
+        
+        // Stop timer
+        clearInterval(timer);
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function generatePDF() {
+        // Collect all user inputs
+        const actions = [
+            document.getElementById('action1')?.value || '',
+            document.getElementById('action2')?.value || '',
+            document.getElementById('action3')?.value || ''
+        ];
+        
+        const weeklyPlans = [
+            document.getElementById('week1')?.value || '',
+            document.getElementById('week2')?.value || '',
+            document.getElementById('week3')?.value || '',
+            document.getElementById('week4')?.value || ''
+        ];
+        
+        const reflection = document.getElementById('kingdomReflection')?.value || '';
+        const mission = document.getElementById('missionStatement')?.value || '';
+        
+        // Create summary
+        let summary = `
+        📖 BIBLICAL FINANCIAL STEWARDSHIP ACTION PLAN
+        ============================================
+        
+        🎯 MY NEXT THREE ACTIONS:
+        1. ${actions[0]}
+        2. ${actions[1]}
+        3. ${actions[2]}
+        
+        📅 30-DAY IMPLEMENTATION:
+        Week 1: ${weeklyPlans[0]}
+        Week 2: ${weeklyPlans[1]}
+        Week 3: ${weeklyPlans[2]}
+        Week 4: ${weeklyPlans[3]}
+        
+        💭 KINGDOM REFLECTION:
+        ${reflection}
+        
+        🎯 MY FINANCIAL MISSION:
+        ${mission}
+        
+        📚 RECOMMENDED RESOURCES:
+        • "A Good Return" by John C. Lennox
+        • Dave Ramsey's Financial Peace University
+        • The Money Guy's Financial Order of Operations
+        • Local biblical financial small group
+        
+        🙏 DAILY PRAYER:
+        "Lord, help me to see my work and money as opportunities to serve You and others. 
+        Develop my character through my financial decisions and help me be a faithful steward."
+        `;
+        
+        // Simple download (in a real app, you'd use a PDF library)
+        const blob = new Blob([summary], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Biblical_Financial_Action_Plan.txt';
+        a.click();
+        URL.revokeObjectURL(url);
+        
+        alert('Your action plan has been downloaded! 🎉 Remember to review and update it regularly as you grow in biblical stewardship.');
+    }
+
+    // Initialize the course
+    document.addEventListener('DOMContentLoaded', function() {
+        initTimer();
+        updateProgress();
+        
+        // Add some interactive behaviors
+        document.querySelectorAll('.checkbox-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                // Don't trigger if clicking directly on the input
+                if (e.target.tagName === 'INPUT') return;
+                
+                const checkbox = this.querySelector('input');
+                if (checkbox.type === 'checkbox') {
+                    checkbox.checked = !checkbox.checked;
+                } else {
+                    // Radio button behavior
+                    document.querySelectorAll(`input[name="${checkbox.name}"]`).forEach(radio => {
+                        radio.checked = false;
+                    });
+                    checkbox.checked = true;
+                }
+            });
+        });
+
+        // Ensure all buttons work properly
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.style.pointerEvents = 'auto';
+            btn.style.cursor = 'pointer';
+        });
+        
+        // Add motivational messages
+        setTimeout(() => {
+            showMotivationalMessage();
+        }, 5 * 60 * 1000); // After 5 minutes
+    });
+
+    function showMotivationalMessage() {
+        const messages = [
+            "💪 You're doing great! Financial stewardship is a marathon, not a sprint.",
+            "🙏 Remember: God is more interested in your character than your bank account.",
+            "⭐ Every wise financial decision today builds a legacy for tomorrow.",
+            "🎯 You're not just managing money—you're stewarding Kingdom resources!"
+        ];
+        
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        
+        // Create temporary message element
+        const messageDiv = document.createElement('div');
+        messageDiv.style.cssText = `
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-width: 300px;
+            font-size: 0.9em;
+            animation: slideIn 0.5s ease-out;
+        `;
+        messageDiv.innerHTML = randomMessage;
+        
+        document.body.appendChild(messageDiv);
+        
+        // Remove after 4 seconds
+        setTimeout(() => {
+            messageDiv.style.animation = 'slideOut 0.5s ease-in forwards';
+            setTimeout(() => {
+                document.body.removeChild(messageDiv);
+            }, 500);
+        }, 4000);
+    }
+
+    // Add CSS for motivational message animations
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+    `;
+    document.head.appendChild(style);
+</script>
+```
+
+</body>
+</html>
